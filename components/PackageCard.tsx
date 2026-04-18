@@ -1,6 +1,6 @@
 "use client";
 
-import { Package } from "@/lib/pacakges";
+import { Package } from "@/types/Package";
 import Image from "next/image";
 
 export default function PackageCard({
