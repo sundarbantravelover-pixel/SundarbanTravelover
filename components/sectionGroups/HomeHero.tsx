@@ -8,7 +8,7 @@ import { Link } from "react-scroll";
 
 export default function HomeHero() {
   return (
-    <section className="relative min-h-screen w-full flex items-center overflow-hidden scroll-mt-20">
+    <section className="relative min-h-screen w-full flex items-center overflow-hidden mt-20 sm:mt-0">
       
       {/* Background */}
       <Image
