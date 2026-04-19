@@ -47,44 +47,27 @@ const AboutUsSection = () => {
             <ContactCard
               icon={FaEnvelope}
               title="Email"
-              details={[
-                <a
-                  key="email"
-                  href="mailto:sundarbantravelover@gmail.com"
-                  className="hover:underline"
-                >
-                  sundarbantravelover@gmail.com
-                </a>
-              ]}
+              details={["sundarbantravelover@gmail.com"]}
             />
           </div>
 
-          {/* Phone / WhatsApp Card */}
+          {/* WhatsApp Card (clickable whole card, both numbers shown) */}
           <div className="flex-1 min-w-[220px]">
-            <ContactCard
-              icon={FaPhoneAlt}
-              title="WhatsApp"
-              details={[
-                <a
-                  key="wa1"
-                  href="https://wa.me/918927791880"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block hover:underline"
-                >
-                  💬 +91 8927791880
-                </a>,
-                <a
-                  key="wa2"
-                  href="https://wa.me/918001809667"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block hover:underline"
-                >
-                  💬 +91 8001809667
-                </a>
-              ]}
-            />
+            <a
+              href="https://wa.me/918927791880"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block h-full"
+            >
+              <ContactCard
+                icon={FaPhoneAlt}
+                title="WhatsApp"
+                details={[
+                  "+91 8927791880",
+                  "+91 8001809667"
+                ]}
+              />
+            </a>
           </div>
 
           {/* Facebook Card */}
