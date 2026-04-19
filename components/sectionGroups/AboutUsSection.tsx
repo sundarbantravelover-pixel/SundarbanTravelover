@@ -1,7 +1,7 @@
 import { inter } from "@/lib/fonts";
 import VerticalImageBar from "../VeritcalImageBar";
 import ContactCard from "../ContactCard";
-import { FaPhoneAlt, FaEnvelope, FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const AboutUsSection = () => {
   return (
@@ -40,28 +40,55 @@ const AboutUsSection = () => {
       {/* ===================== */}
       <div className="w-full px-6 md:px-16 lg:px-24 mt-12">
 
-        <div className="flex flex-col md:flex-row gap-6 items-stretch">
+        <div className="flex flex-col md:flex-row gap-6 items-stretch flex-wrap">
 
           {/* Email Card */}
-          <div className="flex-1">
+          <div className="flex-1 min-w-[220px]">
             <ContactCard
               icon={FaEnvelope}
               title="Email"
-              details={["mondalmousumi6054@gmail.com"]}
+              details={[
+                <a
+                  key="email"
+                  href="mailto:sundarbantravelover@gmail.com"
+                  className="hover:underline"
+                >
+                  sundarbantravelover@gmail.com
+                </a>
+              ]}
             />
           </div>
 
-          {/* Phone Card */}
-          <div className="flex-1">
+          {/* Phone / WhatsApp Card */}
+          <div className="flex-1 min-w-[220px]">
             <ContactCard
               icon={FaPhoneAlt}
-              title="Phone Number"
-              details={["+91 8927791880", "+91 8001809667"]}
+              title="WhatsApp"
+              details={[
+                <a
+                  key="wa1"
+                  href="https://wa.me/918927791880"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:underline"
+                >
+                  💬 +91 8927791880
+                </a>,
+                <a
+                  key="wa2"
+                  href="https://wa.me/918001809667"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:underline"
+                >
+                  💬 +91 8001809667
+                </a>
+              ]}
             />
           </div>
 
-          {/* Facebook Card (Clickable) */}
-          <div className="flex-1">
+          {/* Facebook Card */}
+          <div className="flex-1 min-w-[220px]">
             <a
               href="https://www.facebook.com/share/1E3B51zRgG/"
               target="_blank"
@@ -76,8 +103,8 @@ const AboutUsSection = () => {
             </a>
           </div>
 
-          {/* YouTube Card (Clickable) */}
-          <div className="flex-1">
+          {/* YouTube Card */}
+          <div className="flex-1 min-w-[220px]">
             <a
               href="https://www.youtube.com/@SundarBanTravelOver5789"
               target="_blank"
@@ -88,6 +115,22 @@ const AboutUsSection = () => {
                 icon={FaYoutube}
                 title="YouTube"
                 details={["Visit our YouTube channel"]}
+              />
+            </a>
+          </div>
+
+          {/* Instagram Card */}
+          <div className="flex-1 min-w-[220px]">
+            <a
+              href="https://www.instagram.com/sundarbantravelover?igsh=bDB2em9jNzExaHhk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block h-full"
+            >
+              <ContactCard
+                icon={FaInstagram}
+                title="Instagram"
+                details={["Visit our Instagram profile"]}
               />
             </a>
           </div>
